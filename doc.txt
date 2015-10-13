@@ -1,0 +1,13 @@
+1/ Chạy composer update
+2/ command lệnh dể tạo file language
+yii message/extract @app/config/i18n.php
+Chú ý khi tạo từ gii thêm tick enable I18N để có thể dùng multil language
+Sử dụng mutil language dùng Yii::t('file dịch','chuỗi cần dịch');
+vd set Yii::$app->controller->language="vi" (giả sử dụng tiếng việt)
+ có 1 file tên là: app.php trong thư mục[messages/vi]
+ sử dụng Yii::t('app','run demo'); khi đó từ 'run demo' trong file app sẽ được dịch ra theo config của mình
+
+3/Để tạo tài khoản admin vào /admin/user để tạo tài khoản admin.
+extend các controller vào /components/controller/AdminBaseController để require login và phân quyền.
+4- Đang cập nhật phần phân quyền(permission)
+5-updating
